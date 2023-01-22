@@ -8,7 +8,7 @@ import csv
 import haversine as hs
 import webbrowser
 
-ev_dict=[*csv.DictReader(open(r"D:\hackathon_project\EV_location.csv"))]
+ev_dict=[*csv.DictReader(open(r"EV_location.csv"))]
 #fuction to sort two of the nearsest EV charging stations from your current location
 def top_two_ev(flat, flong):
     
@@ -30,7 +30,7 @@ def bat_dist(fbat):
 
     return b_dist
 
-with open(r"D:\hackathon_project\current_location.csv") as current_location:
+with open(r"current_location.csv") as current_location:
    csv_reader = csv.reader(current_location)
    for index, row in enumerate(csv_reader):   
         lat = row[1]
